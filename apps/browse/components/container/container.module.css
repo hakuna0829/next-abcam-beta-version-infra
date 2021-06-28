@@ -1,0 +1,8 @@
+.container {
+  @apply m-auto;
+  @apply p-5;
+}
+
+.widthLimited {
+  @apply max-w-desktop;
+}

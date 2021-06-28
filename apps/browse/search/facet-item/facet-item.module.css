@@ -1,0 +1,36 @@
+.filterCount {
+  @apply text-black;
+  @apply bg-grey95;
+  @apply top-1;
+  @apply relative;
+  @apply py-1;
+  @apply px-2;
+
+  font-size: 0.625rem;
+
+  border-radius: 20px;
+  @apply ml-4;
+}
+
+.filterRow {
+  @apply flex;
+  @apply items-center;
+  @apply pb-5;
+  @apply pl-4;
+  @apply pr-4;
+}
+
+.filterRow:first-child {
+  @apply pt-5;
+}
+
+.countComponent {
+  @apply inline;
+  width: 18px;
+  @apply h-3;
+  @apply mx-1.5;
+  padding: 0 6px;
+  border-radius: 9px;
+  @apply text-white;
+  @apply bg-green35;
+}

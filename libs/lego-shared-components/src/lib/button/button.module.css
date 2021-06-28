@@ -1,0 +1,186 @@
+.container {
+  @apply inline-flex;
+  @apply self-center;
+  @apply items-center;
+  @apply mx-1;
+  @apply border;
+  @apply max-w-max;
+  @apply min-w-max;
+
+  path {
+    @apply fill-current;
+  }
+
+  .content {
+    @apply block;
+    @apply px-1.5;
+    padding-bottom: 0.19rem;
+  }
+
+  &:hover {
+    @apply no-underline;
+  }
+
+  &:focus {
+    @apply outline-none;
+    @apply shadow-interactiveElement;
+  }
+
+  &.disabled {
+    @apply bg-grey90;
+    @apply border-grey90;
+    @apply text-white;
+    @apply cursor-not-allowed;
+
+    &:hover {
+      @apply bg-grey90;
+    }
+  }
+
+  &.iconButton {
+    min-width: auto;
+  }
+}
+
+/****** Variants ******/
+
+.primary {
+  @apply bg-buttonPrimary;
+  @apply border-buttonPrimary;
+  @apply text-white;
+
+  &:hover {
+    @apply bg-buttonPrimaryHover;
+  }
+
+  &:active {
+    @apply bg-interactiveBlueActive;
+  }
+}
+
+.secondary {
+  @apply bg-grey35;
+  @apply text-white;
+  @apply border-grey35;
+
+  &:hover {
+    @apply bg-buttonSecondaryHover;
+  }
+
+  &:active {
+    @apply bg-interactiveGreyDarkActive;
+  }
+}
+
+.tertiary {
+  @apply bg-white;
+  @apply text-grey20;
+  @apply border-backgroundLightbox;
+
+  &:hover {
+    @apply bg-interactiveGreyTransparentHover;
+  }
+
+  &:active {
+    @apply bg-backgroundLightbox;
+  }
+
+  &.disabled {
+    @apply bg-white;
+    @apply text-grey80;
+  }
+}
+
+.quaternary {
+  @apply bg-buttonQuaternary;
+  @apply border-buttonQuaternary;
+  @apply text-grey20;
+
+  &:hover {
+    @apply bg-buttonQuaternaryHover;
+  }
+  &:active {
+    @apply bg-interactiveGreyTransparentActive;
+  }
+}
+
+.quinary {
+  @apply border-0;
+  @apply text-grey20;
+
+  &:hover {
+    @apply bg-interactiveGreyTransparentHover;
+  }
+
+  &:active {
+    @apply bg-interactiveGreyTransparentActive;
+  }
+
+  &:disabled {
+    @apply text-grey80;
+    @apply bg-transparent;
+  }
+}
+
+/****** Sizes ******/
+.small {
+  @apply px-2.5;
+  @apply py-1.5;
+  @apply rounded-sm;
+  @apply text-ui-small;
+
+  svg {
+    width: 0.831rem;
+    height: 0.831rem;
+  }
+
+  &.iconButton {
+    @apply w-8;
+    @apply h-8;
+    @apply px-3 py-2;
+    @apply flex;
+    @apply flex-col;
+    @apply rounded-full;
+  }
+}
+
+.medium {
+  @apply rounded-lg;
+  @apply text-ui-medium;
+  @apply px-5 py-2;
+
+  svg {
+    width: 1.044rem;
+    height: 1.044rem;
+  }
+
+  &.iconButton {
+    @apply w-10;
+    @apply h-10;
+    @apply flex;
+    @apply flex-col;
+    @apply rounded-full;
+    padding: 0.625rem;
+  }
+}
+
+.large {
+  @apply px-6;
+  @apply py-3.5;
+  @apply rounded-lg;
+  @apply text-ui-large;
+
+  svg {
+    @apply w-5;
+    @apply h-5;
+  }
+
+  &.iconButton {
+    @apply w-14;
+    @apply h-14;
+    @apply flex;
+    @apply flex-col;
+    @apply p-4;
+    @apply rounded-full;
+  }
+}

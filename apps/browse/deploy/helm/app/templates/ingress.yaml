@@ -1,0 +1,31 @@
+# Ingress
+## https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.1/how-it-works/
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ include "full_app_name" . }}-ingress
+  namespace: {{ .Values.namespace }}
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/tags: {{ .Values.additional_resource_tags }}
+    alb.ingress.kubernetes.io/scheme: {{ .Values.ingress_scheme }} # internet-facing for prod AKAMAI, internal for any other environment
+  {{ if .Values.ingress_security_group }}
+    alb.ingress.kubernetes.io/security-groups: {{ .Values.ingress_security_group }}
+  {{ end }}
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: {{ include "full_app_name" . }}-service
+              servicePort: {{ .Values.service_port }}
+      # host: browse.web.public.dev.abcam.net
+    - host: browse-preview.web.public.dev.abcam.net
+      http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: {{ include "full_app_name" . }}-preview-service
+              servicePort: {{ .Values.service_port }}
+              servicePort: {{ .Values.service_port }}

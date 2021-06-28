@@ -1,0 +1,88 @@
+.pageWrap {
+  @apply w-full;
+  @apply relative;
+  @apply z-searchWrapper;
+}
+
+.isHomePage {
+  @apply h-full;
+}
+
+.pageWrapActive {
+  @apply bg-grey20;
+}
+
+.wrapper {
+  @apply top-0;
+  @apply right-0;
+  @apply left-0;
+  transition: height 500ms cubic-bezier(0.4, 0, 0, 1);
+  @apply flex;
+  @apply flex-col;
+  @apply md:flex-row;
+}
+
+.mobilePanel {
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+  @apply pt-4;
+  @apply md:hidden;
+}
+
+.mobilePanelIdle {
+  @apply bg-grey20;
+  @apply flex;
+}
+
+.mobilePanelActive {
+  @apply bg-grey20;
+}
+
+.aboutToggleLeft {
+  @apply block;
+  @apply pr-4;
+  @apply md:pr-0;
+  @apply md:hidden;
+}
+
+.aboutToggleRight {
+  @apply hidden;
+  @apply md:block;
+}
+
+.logoMobileWrap {
+  @apply justify-end;
+  @apply pr-6;
+}
+
+.flexCenterVerticallyLeft {
+  padding-right: 1.85rem;
+  @apply flex;
+  @apply justify-end;
+  @apply items-center;
+}
+
+.flexCenterVerticallyRight {
+  padding-left: 1.85rem;
+  @apply flex;
+  @apply justify-end;
+  @apply items-center;
+}
+
+.isHomePage {
+  @apply h-full;
+}
+
+.right {
+  @apply pr-24;
+  text-align: right;
+  @apply bg-transparent;
+}
+
+.fullScreen {
+  @apply w-full;
+  flex: 1;
+  position: initial;
+  left: initial;
+}

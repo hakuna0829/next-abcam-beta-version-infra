@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The select element Snapshots Matches the snapshot on initial state 1`] = `
+<div
+  class="select"
+>
+  <div
+    class="selectedValueContainer"
+    role="button"
+    tabindex="0"
+  >
+    value 1
+    <svg
+      aria-label="Open select"
+    />
+  </div>
+  <div
+    class="content"
+    role="button"
+  />
+</div>
+`;
+
+exports[`The select element Snapshots Matches the snapshot when opened 1`] = `
+<div
+  class="select open"
+>
+  <div
+    class="selectedValueContainer"
+    role="button"
+    tabindex="0"
+  >
+    value 1
+    <svg
+      aria-label="Open select"
+    />
+  </div>
+  <div
+    class="content"
+    role="button"
+  >
+    <ul
+      role="presentation"
+    >
+      <li
+        aria-label="value 1"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 1
+        </div>
+      </li>
+      <li
+        aria-label="value 2"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 2
+        </div>
+      </li>
+      <li
+        aria-label="value 3"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 3
+        </div>
+      </li>
+      <li
+        aria-label="value 4"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 4
+        </div>
+      </li>
+      <li
+        aria-label="value 5"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 5
+        </div>
+      </li>
+      <li
+        aria-label="value 6"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 6
+        </div>
+      </li>
+      <li
+        aria-label="value 7"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 7
+        </div>
+      </li>
+      <li
+        aria-label="value 8"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 8
+        </div>
+      </li>
+      <li
+        aria-label="value 9"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 9
+        </div>
+      </li>
+      <li
+        aria-label="value 10"
+      >
+        <div
+          role="button"
+          tabindex="0"
+        >
+          value 10
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

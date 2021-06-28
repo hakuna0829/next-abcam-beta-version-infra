@@ -1,0 +1,104 @@
+@media screen {
+  .BuyBox {
+    @apply bg-grey95;
+    @apply text-black;
+    @apply text-center;
+    @apply p-5;
+    @apply rounded;
+
+    font-weight: 600;
+
+    .restrictionContainer {
+      .title {
+        @apply text-red;
+        @apply text-lg;
+      }
+
+      .message {
+        @apply mt-5;
+      }
+    }
+
+    .priceContainer {
+      @apply mt-3;
+
+      font-size: 24px;
+
+      .message {
+        @apply text-grey60;
+        @apply text-body-small;
+      }
+    }
+
+    .quantityContainer {
+      @apply text-body-small;
+      @apply mt-5;
+
+      .message {
+        @apply mt-3;
+
+        &.green {
+          @apply text-green45;
+        }
+      }
+    }
+
+    .addButton {
+      @apply mt-5;
+    }
+
+    .shippingContainer {
+      @apply text-sm;
+      @apply py-1.5;
+
+      &.restricted {
+        @apply text-base;
+      }
+
+      .message {
+        @apply mt-2.5;
+      }
+
+      .countrySelector {
+        @apply bg-transparent;
+        @apply text-blue;
+        @apply border-none;
+        @apply text-sm;
+        @apply py-1;
+
+        &:hover,
+        &:focus,
+        &.visited {
+          @apply border-none;
+          @apply outline-none;
+          @apply bg-transparent;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      &.restricted {
+        @apply rounded-full;
+        @apply border;
+        @apply bg-transparent;
+      }
+
+      .restrictionContainer {
+        .title {
+          @apply text-grey20;
+          @apply text-xs;
+        }
+
+        .message {
+          @apply hidden;
+        }
+      }
+
+      .shippingContainer {
+        &.restricted {
+          @apply hidden;
+        }
+      }
+    }
+  }
+}

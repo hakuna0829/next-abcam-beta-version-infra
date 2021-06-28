@@ -1,0 +1,20 @@
+{
+  "entityList": {
+    "items": [
+      {
+        "description": {
+          "plaintext": "description"
+        },
+        "image": {
+          "_path": "string",
+          "mimeType": "string",
+          "width": 1000,
+          "height": 1000
+        },
+        "slug": "Ki67",
+        "synonyms": "stage",
+        "title": "Ki67"
+      }
+    ]
+  }
+}

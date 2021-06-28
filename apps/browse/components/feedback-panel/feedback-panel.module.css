@@ -1,0 +1,27 @@
+.container {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply bg-greydark;
+  @apply w-full;
+  @apply p-4;
+  @apply text-base;
+  @apply z-feedbackPanel;
+}
+
+.container a {
+  @apply text-white;
+  @apply underline;
+}
+
+.active {
+  @apply bg-buttonSecondaryHover;
+}
+
+.light {
+  @apply bg-greydark;
+}
+
+.dark {
+  @apply bg-buttonSecondaryHover;
+}

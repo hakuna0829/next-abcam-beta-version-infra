@@ -1,0 +1,44 @@
+.container {
+  @apply py-4;
+  @apply mx-20;
+  @apply lg:mx-48;
+  @apply grid;
+  @apply sm:grid-cols-4;
+  @apply gap-x-20;
+  @apply gap-y-4;
+  @apply h-full;
+}
+
+.description {
+  @apply col-span-3;
+}
+
+.heading {
+  @apply text-black;
+  @apply my-5;
+}
+
+.synonyms {
+  @apply text-grey60;
+  @apply text-xs;
+}
+
+.imageContainer {
+  @apply col-span-3;
+  @apply sm:col-span-1;
+  @apply flex;
+  @apply justify-center;
+}
+
+.image {
+  @apply sm:w-40;
+  min-width: 10rem;
+  @apply object-contain;
+  @apply hidden;
+  @apply sm:flex;
+}
+
+.searchResults {
+  @apply col-span-5;
+  @apply mt-12;
+}

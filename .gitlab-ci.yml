@@ -1,0 +1,243 @@
+stages:
+  - init
+  - pre-build
+  - test
+  - build
+  - package
+  - infrastructure:staging
+  - deploy:staging
+  - e2e-test:staging
+  - infrastructure:preprod
+  - deploy:preprod
+  - infrastructure:prod
+  - deploy:prod
+
+include:
+  - project: 'gitlab-ci/templates'
+    file: '/templates/generic.gitlab-ci.yml'
+
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_IID
+    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+.nx-affected: &nx-affected
+  - |
+    # Run nx-affected
+    git fetch -q
+    if [[ $CI_MERGE_REQUEST_IID ]]; then
+      export AFFECTED_CRITERIA="--base=origin/${CI_DEFAULT_BRANCH}"
+    else
+      export AFFECTED_CRITERIA="--base=origin/${CI_DEFAULT_BRANCH}~1"
+    fi
+
+.yarn-before-scripts: &yarn-before-scripts
+  - yarn config set cache-folder .yarn
+  - yarn install --frozen-lockfile
+
+.runner-override: &runner-override
+  KUBERNETES_CPU_LIMIT: 750m
+
+.node-image-version: &node-image-version node:14.16.1
+
+.template.infrastructure:
+  extends: .template.generic-aws-assume-role
+  stage: '' # Defined by each job extending this template
+  image: *node-image-version
+  variables:
+    STAGE: '' # Defined by each job extending this template
+    AWS_REGION: eu-west-1
+    DEPLOYER_ROLE_ARN: '' # The deployer role will drive the aws account used to deploy the application
+  script:
+    - *nx-affected
+    - yarn affected --target=infrastructure ${AFFECTED_CRITERIA} --stage=${STAGE}
+  artifacts:
+    paths:
+      - dist/
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+.template.deploy:
+  extends: .template.generic-aws-assume-role
+  stage: '' # Defined by each job extending this template
+  image: *node-image-version
+  variables:
+    STAGE: '' # Defined by each job extending this template
+    DEPLOYER_ROLE_ARN: '' # Defined by each job extending this template
+    DEPLOYMENT_TAG: $CI_COMMIT_SHORT_SHA
+  script:
+    - *nx-affected
+    - yarn affected --target=deploy ${AFFECTED_CRITERIA} --stage=${STAGE}
+  artifacts:
+    paths:
+      - dist/
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+# variables for all jobs
+variables:
+  KUBERNETES_MEMORY_LIMIT: 1.2Gi
+  NODE_OPTIONS: '--max-old-space-size=1024'
+
+# Cache modules in between jobs
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  policy: pull
+  paths:
+    - .yarn-cache/
+    - node_modules/
+
+📇yarn-install:init:
+  stage: init
+  image: *node-image-version
+  variables:
+    <<: *runner-override
+  script:
+    - *yarn-before-scripts
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: push
+    paths:
+      - .yarn-cache/
+      - node_modules/
+
+👌code-analysis:
+  stage: pre-build
+  image: *node-image-version
+  script:
+    - *nx-affected
+    - yarn affected:lint ${AFFECTED_CRITERIA}
+    - yarn format:check ${AFFECTED_CRITERIA}
+  allow_failure: true
+
+🚧docker-repo-setup:
+  extends: .template.generic-aws-assume-role
+  stage: pre-build
+  image: *node-image-version
+  variables:
+    AWS_REGION: eu-west-1
+    # The deployer role will drive the aws account used to deploy the application
+    # DEPLOYER_ROLE_ARN_DEV is defined at the group level (AbcamDigital - https://gitlab.abcam.com/groups/abcamdigital/-/settings/ci_cd)
+    DEPLOYER_ROLE_ARN: '${DEPLOYER_ROLE_ARN_OPS}'
+  script:
+    - *nx-affected
+    - yarn affected --target=docker-repo-setup ${AFFECTED_CRITERIA}
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+🚨test:
+  stage: test
+  image: *node-image-version
+  variables:
+    JEST_JUNIT_OUTPUT_DIR: './test-results'
+    JEST_JUNIT_UNIQUE_OUTPUT_NAME: 'true'
+    JEST_JUNIT_CLASSNAME: '{filename}'
+    JEST_JUNIT_TITLE: '{classname} {title}'
+  script:
+    - *nx-affected
+    - yarn affected:test ${AFFECTED_CRITERIA} --ci --reporters=default --reporters=jest-junit
+  needs:
+    - 📇yarn-install:init
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - './test-results/*'
+
+🔨build:
+  stage: build
+  image: *node-image-version
+  script:
+    - *nx-affected
+    - yarn affected:build ${AFFECTED_CRITERIA}
+  needs:
+    - 📇yarn-install:init
+  artifacts:
+    paths:
+      - dist/
+
+📦package:
+  stage: package
+  image: overbit/kaniko-node:latest
+  variables:
+    <<: *runner-override
+    DEPLOYMENT_TAG: $CI_COMMIT_SHORT_SHA
+    DEPLOYER_ROLE_ARN: '${DEPLOYER_ROLE_ARN_OPS}'
+  script:
+    - *nx-affected
+    - yarn affected --target=package ${AFFECTED_CRITERIA} --tag=$DEPLOYMENT_TAG
+  dependencies:
+    - 🚧docker-repo-setup
+    - 🔨build
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+#### STAGING - aws abcam-ekscalibur-staging ####
+👷infrastructure:staging:
+  extends: .template.infrastructure
+  stage: infrastructure:staging
+  variables:
+    STAGE: staging
+    DEPLOYER_ROLE_ARN: ${DEPLOYER_ROLE_ARN_STAGING}
+
+🚀deploy:staging:
+  extends: .template.deploy
+  stage: deploy:staging
+  environment:
+    name: staging
+  variables:
+    STAGE: staging
+    DEPLOYER_ROLE_ARN: ${DEPLOYER_ROLE_ARN_STAGING}
+    DEPLOYMENT_TAG: $CI_COMMIT_SHORT_SHA
+  dependencies:
+    - 📦package
+    - 👷infrastructure:staging
+
+#### PREPROD ####
+👷infrastructure:preprod:
+  extends: .template.infrastructure
+  stage: infrastructure:preprod
+  variables:
+    STAGE: preprod
+    DEPLOYER_ROLE_ARN: ${DEPLOYER_ROLE_ARN_PREPROD}
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
+
+🚀deploy:preprod:
+  extends: .template.deploy
+  stage: deploy:preprod
+  variables:
+    STAGE: preprod
+    DEPLOYER_ROLE_ARN: ${DEPLOYER_ROLE_ARN_PREPROD}
+    DEPLOYMENT_TAG: $CI_COMMIT_SHORT_SHA
+  dependencies:
+    - 📦package
+    - 👷infrastructure:preprod
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+#### PROD ####
+👷infrastructure:prod:
+  extends: .template.infrastructure
+  stage: infrastructure:prod
+  variables:
+    STAGE: prod
+    DEPLOYER_ROLE_ARN: ${DEPLOYER_ROLE_ARN_PROD}
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
+
+🚀deploy:prod:
+  extends: .template.deploy
+  stage: deploy:prod
+  variables:
+    STAGE: prod
+    DEPLOYER_ROLE_ARN: ${DEPLOYER_ROLE_ARN_PROD}
+    DEPLOYMENT_TAG: $CI_COMMIT_SHORT_SHA
+  dependencies:
+    - 📦package
+    - 👷infrastructure:prod
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

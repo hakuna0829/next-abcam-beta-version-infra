@@ -1,0 +1,93 @@
+.productGrid {
+  @apply flex;
+  @apply flex-col;
+  @apply text-grey20;
+  @apply mt-5;
+  @apply border-t;
+}
+
+.productGridRowHeader {
+  @apply flex;
+  @apply sticky;
+  @apply top-0;
+  @apply px-2;
+  @apply mt-4;
+  @apply bg-white;
+
+  @apply text-left;
+  @apply border-b;
+  @apply border-solid;
+  border-color: rgba(39, 63, 63, 0.2);
+  @apply py-0;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.productGridRowHeader .isSticked {
+  box-shadow: 0 6px 12px 0 rgba(39, 63, 63, 0.12);
+}
+
+.productGridRow {
+  @apply flex;
+  @apply text-center;
+  @apply cursor-pointer;
+  @apply flex-col;
+  @apply border-l-2;
+  @apply border-solid;
+  @apply border-transparent;
+  @apply justify-between;
+  @apply py-6;
+  @apply md:flex-row;
+  @apply border-b;
+  @apply border-solid;
+  border-color: rgba(39, 63, 63, 0.1);
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+}
+
+@screen md {
+  .productGridRow {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+.productGridRow:hover {
+  background-color: rgba(39, 63, 63, 0.05);
+}
+.productGridRow:active {
+  background-color: rgba(39, 63, 63, 0.1);
+}
+.productGridRow:active {
+  border-left: 0.5rem solid #17c67e;
+  background-color: rgba(23, 198, 126, 0.1);
+}
+
+.productGridRow.isSelected {
+  border-left: 0.5rem solid #17c67e;
+  background-color: rgba(23, 198, 126, 0.1);
+}
+
+.buttonTop {
+  @apply fixed;
+  @apply right-6;
+  @apply bottom-6;
+  @apply hidden;
+}
+
+.buttonTop.isVisible {
+  @apply block;
+}
+.mobileView {
+  @apply flex;
+  @apply justify-center;
+  @apply block;
+  @apply md:hidden;
+}
+.mobileView button {
+  @apply mr-2;
+}
+
+.rowSelected {
+  background-color: rgba(23, 198, 126, 0.4);
+}

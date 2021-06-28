@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2019", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@browse/*": ["apps/browse/*"],
+      "@browse-e2e/*": ["apps/browse-e2e/*"],
+      "@checkout/*": ["apps/checkout/*"],
+      "@abcam-web/lego-shared-components/*": [
+        "libs/lego-shared-components/src/*"
+      ],
+      "@abcam-web/lego-shared-utils/*": ["libs/lego-shared-utils/src/*"],
+      "@checkout-shared/*": ["libs/checkout-shared/src/*"],
+      "@abcam-web/lego-shared-utils": ["libs/lego-shared-utils/src/index.ts"]
+    },
+    "strict": true
+  },
+  "exclude": ["node_modules", "tmp"]
+}

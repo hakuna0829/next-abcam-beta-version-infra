@@ -1,0 +1,6 @@
+.table {
+  @apply md:grid;
+  @apply md:grid-cols-2;
+  @apply md:grid-cols-pdpDataSheetTable;
+  @apply pt-8;
+}

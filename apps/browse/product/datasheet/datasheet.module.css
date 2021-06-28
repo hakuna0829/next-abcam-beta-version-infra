@@ -1,0 +1,16 @@
+.copy {
+  @apply md:col-span-2;
+  @apply text-grey20;
+}
+
+.copy a {
+  @apply text-blue;
+}
+
+.copy p {
+  @apply mb-4;
+}
+
+.collFull {
+  @apply col-span-2;
+}

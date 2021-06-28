@@ -1,0 +1,20 @@
+.filterCount {
+  @apply text-black;
+  @apply bg-grey95;
+  @apply top-1;
+  @apply relative;
+  @apply py-1;
+  @apply px-2;
+
+  @apply text-xxs;
+
+  border-radius: 20px;
+  @apply ml-4;
+}
+
+.filterRow {
+  @apply pb-5;
+}
+.filterRow:first-child {
+  @apply pt-5;
+}

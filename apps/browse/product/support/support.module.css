@@ -1,0 +1,19 @@
+.buttonContainer {
+  @apply flex;
+}
+
+.button {
+  @apply inline-flex;
+}
+
+.button path {
+  @apply fill-current;
+}
+
+.heading {
+  @apply text-grey20;
+  @apply text-2xl;
+  @apply tracking-tighter;
+  @apply mt-4;
+  @apply mb-5;
+}

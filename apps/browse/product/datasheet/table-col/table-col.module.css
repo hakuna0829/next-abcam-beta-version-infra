@@ -1,0 +1,15 @@
+.container {
+  @apply mb-8;
+}
+
+.heading {
+  @apply mb-0;
+  @apply text-grey60;
+  @apply text-base;
+}
+
+.content {
+  @apply mb-0;
+  @apply text-grey20;
+  @apply text-base;
+}

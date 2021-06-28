@@ -1,0 +1,52 @@
+.headingContainer {
+  @apply grid;
+  @apply grid-cols-pdpCols;
+  @apply items-baseline;
+  @apply pb-5;
+}
+
+.headingContainer .recommendedDilution {
+  @apply ml-2;
+  @apply text-xs;
+}
+
+.gridContainer {
+  @apply grid;
+  @apply md:grid-cols-2;
+  @apply gap-x-8;
+  @apply gap-y-5;
+}
+
+.gridColumn {
+  @apply grid;
+  @apply grid-cols-2;
+  @apply grid-cols-pdpCols;
+  @apply items-center;
+  @apply border-grey10;
+  @apply border-solid;
+  @apply border-t;
+  @apply pt-5;
+}
+
+.buttonContainer {
+  @apply ml-2;
+  @apply mt-1;
+}
+
+.evidenceContainer {
+  @apply mt-4;
+  @apply col-span-2;
+}
+
+.validationApplicationListContainer {
+  @apply border-grey10;
+  @apply border-solid;
+  @apply border-t;
+  @apply pt-5;
+  @apply md:row-start-1;
+  @apply md:col-start-2;
+}
+
+.heading {
+  @apply text-4xl;
+}

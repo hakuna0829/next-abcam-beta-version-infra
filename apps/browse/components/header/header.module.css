@@ -1,0 +1,10 @@
+.container {
+  @apply bg-grey20;
+  @apply w-full;
+  @apply p-4;
+}
+
+.container h2 {
+  @apply text-white;
+  font-size: 20px;
+}

@@ -1,0 +1,13 @@
+.wrapper {
+  @apply flex;
+  @apply items-center;
+}
+
+.icon {
+  @apply relative;
+  top: 3px;
+}
+
+.label {
+  @apply ml-1;
+}

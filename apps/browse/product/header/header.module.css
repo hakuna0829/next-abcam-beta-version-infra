@@ -1,0 +1,17 @@
+.container {
+  @apply grid;
+  @apply grid-cols-2;
+  @apply items-center;
+  @apply mb-6;
+}
+
+.header {
+  @apply text-grey60;
+  @apply text-2xl;
+  @apply tracking-tighter;
+}
+
+.buttonContainer {
+  @apply flex;
+  @apply justify-end;
+}

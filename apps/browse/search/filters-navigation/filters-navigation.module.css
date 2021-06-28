@@ -1,0 +1,59 @@
+.allFiltersDrawerHeaderWrapper {
+  @apply flex;
+  @apply text-grey20;
+  @apply text-center;
+}
+
+.mobileRelevanceButtonWrapper {
+  @apply block;
+  @apply md:hidden;
+}
+
+.commonRelevanceButtonWrapper {
+  @apply hidden;
+  @apply md:block;
+}
+
+.filtersContainer {
+  @apply flex;
+  @apply flex-row;
+  @apply justify-between;
+  @apply md:justify-center;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
+}
+
+@screen md {
+  .filtersContainer {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+.filtersWrapper {
+  @apply flex-row;
+  @apply rounded-tl;
+  background-color: rgba(39, 63, 63, 0.05);
+  @apply mt-7;
+  @apply mb-5;
+  @apply hidden;
+  @apply md:flex;
+  @apply whitespace-nowrap;
+}
+
+.filtersWrapper div button:first-child {
+  border: none;
+  background-color: transparent;
+}
+
+.outerAllFiltersButton {
+  @apply invisible;
+  @apply absolute;
+  @apply md:visible;
+  @apply md:relative;
+}
+
+.outerAllFiltersButton .isVisible {
+  @apply visible;
+  @apply relative;
+}

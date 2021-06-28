@@ -1,0 +1,29 @@
+.backButton {
+  @apply md:hidden;
+}
+
+.header {
+  @apply flex;
+  @apply flex-row;
+  @apply justify-center;
+  @apply md:justify-between;
+  @apply mt-3;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+@screen md {
+  .header {
+    margin-left: 6.25%;
+    margin-right: 6.25%;
+  }
+}
+
+.title {
+  @apply m-0;
+  @apply block;
+  @apply text-grey20;
+  @apply normal-case;
+  font-size: 1.313rem;
+  line-height: 1.29;
+}

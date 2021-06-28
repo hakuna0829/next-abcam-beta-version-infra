@@ -1,0 +1,7 @@
+export { ReactComponent as ChevronDown } from './chevron-down.svg'
+export { ReactComponent as ChevronUp } from './chevron-up.svg'
+export { ReactComponent as ArrowLeft } from './arrow-left.svg'
+export { ReactComponent as Picture } from './picture.svg'
+export { ReactComponent as Bin } from './bin.svg'
+export { ReactComponent as Cart } from './cart.svg'
+export { ReactComponent as Before } from './before.svg'

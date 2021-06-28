@@ -1,0 +1,37 @@
+.slider {
+  @apply m-smSlider;
+}
+
+.slider button:focus {
+  @apply outline-none;
+}
+
+.sliderHeader {
+  @apply flex;
+  @apply justify-between;
+}
+
+.sliderImageWrapper {
+  @apply overflow-hidden;
+}
+
+.sliderImage {
+  @apply rounded-4px;
+  @apply bg-white;
+  @apply cursor-pointer;
+  @apply object-contain;
+  box-shadow: 0 3px 8px 0 rgba(39, 63, 63, 0.11);
+  border: solid 4px var(--brand-grey);
+}
+
+.sliderNav {
+  @apply inline-flex;
+}
+
+.imageWrapper {
+  @apply justify-center;
+  @apply text-center;
+  height: 124px;
+  width: 124px;
+  margin-right: 10px;
+}

@@ -1,0 +1,120 @@
+.container {
+  @apply overflow-x-auto;
+}
+
+.table {
+  border-spacing: 0px;
+  @apply mt-2;
+}
+
+.table tr {
+  @apply leading-11;
+}
+
+.table th {
+  @apply pb-8;
+  @apply text-grey60;
+  @apply text-sm;
+}
+
+.table td {
+  border-bottom: 1px solid rgba(39, 63, 63, 0.12);
+  @apply align-middle;
+  @apply pr-4;
+  @apply w-36;
+}
+
+.table span {
+  @apply text-grey60;
+  @apply text-sm;
+}
+
+.table path {
+  @apply fill-green;
+  @apply transform-gpu;
+  @apply scale-80;
+}
+
+.table a {
+  @apply text-blue;
+  @apply mt-4;
+  @apply inline-block;
+}
+
+.table .iconWrapper {
+  @apply flex;
+}
+
+.table .iconWrapper span {
+  @apply flex;
+  @apply text-xs;
+}
+
+.table .check span {
+  @apply text-green35;
+}
+
+.table .check path {
+  @apply fill-green;
+  @apply transform-gpu;
+  @apply scale-80;
+}
+
+.table .cross span {
+  @apply text-cross;
+  padding-top: 0.1rem;
+  white-space: nowrap;
+}
+
+.table .cross path {
+  @apply fill-cross;
+  @apply transform-gpu;
+  @apply scale-70;
+}
+
+.rowFontStyle {
+  @apply items-center;
+  @apply justify-center;
+  @apply flex;
+  @apply text-xs;
+  height: 1.125rem;
+  letter-spacing: 0.5px;
+}
+
+.table .countWrap {
+  @apply ml-2;
+  @apply leading-4;
+
+  background-color: rgba(39, 63, 63, 0.05);
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border-radius: 10rem;
+}
+
+.table .tableLabel {
+  @apply text-xs;
+  @apply text-grey20;
+
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.noIdentifiedWrap {
+  @apply inline-flex;
+  @apply text-grey20;
+  @apply text-xs;
+
+  padding-top: 1.5625rem;
+}
+
+.noIdentifiedWrap > span {
+  margin-left: 0.3rem;
+}
+
+.betaIcon {
+  @apply w-7;
+}
+
+.column {
+  @apply text-sm;
+}

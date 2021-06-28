@@ -1,0 +1,7 @@
+.container {
+  @apply py-4;
+  @apply mx-20;
+  @apply lg:mx-48;
+
+  margin-bottom: 5.625rem;
+}

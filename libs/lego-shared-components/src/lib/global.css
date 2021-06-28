@@ -1,0 +1,19 @@
+@import '../../../../apps/browse/styles/globals.css';
+
+@font-face {
+  font-family: 'Eina03-Semibold';
+  src: url('../../../../apps/browse/public/fonts/Eina03-Semibold.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Eina03-Regular';
+  src: url('../../../../apps/browse/public/fonts/Eina03-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}

@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderSummary should match the snapshot 1`] = `
+<div
+  className="OrderSummary"
+>
+  <div
+    className="content"
+  >
+    <div
+      className="subTotal"
+    >
+      <div
+        className="subTotalHeader"
+      >
+        <p>
+          Subtotal (
+          2
+           items)
+        </p>
+      </div>
+      <div
+        className="subTotalValue"
+      >
+        <p>
+          $
+          40
+        </p>
+      </div>
+    </div>
+    <div
+      className="shippingAndHandling"
+    >
+      <div
+        className="shippingAndHandlingHeader"
+      >
+        <p>
+          Shipping & handling
+        </p>
+      </div>
+      <div
+        className="shippingAndHandlingValue"
+      >
+        <Button
+          as="a"
+          className="whitespace-nowrap countrySelector"
+          onClick={[MockFunction]}
+          size="small"
+          variant="primary"
+        >
+          Choose your country to estimate
+        </Button>
+      </div>
+    </div>
+    <div
+      className="tax"
+    >
+      <div
+        className="taxHeader"
+      >
+        <p>
+          VAT (
+          20
+          %)
+        </p>
+      </div>
+      <div
+        className="taxValue"
+      >
+        <p>
+          $
+          20
+        </p>
+      </div>
+    </div>
+    <div>
+      <hr
+        className="middleLine"
+      />
+    </div>
+    <div
+      className="total"
+    >
+      <div
+        className="totalHeader"
+      >
+        <p>
+          Order total
+        </p>
+      </div>
+      <div
+        className="totalValue"
+      >
+        <p>
+          $
+          60
+        </p>
+      </div>
+    </div>
+    <div
+      className="buttons"
+    >
+      <Button
+        className="whitespace-nowrap loginButton"
+        onClick={[MockFunction]}
+        size="large"
+        variant="primary"
+      >
+        Login to checkout
+      </Button>
+      <Button
+        className="whitespace-nowrap continueButton"
+        onClick={[MockFunction]}
+        size="large"
+        variant="tertiary"
+      >
+        Continue browsing
+      </Button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OrderSummary should render in smaller screen 1`] = `
+<div
+  className="OrderSummary"
+>
+  <div
+    className="content"
+  >
+    <div
+      className="subTotal"
+    >
+      <div
+        className="subTotalHeader"
+      >
+        <p>
+          Subtotal (
+          2
+           items)
+        </p>
+      </div>
+      <div
+        className="subTotalValue"
+      >
+        <p>
+          $
+          40
+        </p>
+      </div>
+    </div>
+    <div
+      className="shippingAndHandling"
+    >
+      <div
+        className="shippingAndHandlingHeader"
+      >
+        <p>
+          Shipping & handling
+        </p>
+      </div>
+      <div
+        className="shippingAndHandlingValue"
+      >
+        <Button
+          as="a"
+          className="whitespace-nowrap countrySelector"
+          onClick={[MockFunction]}
+          size="small"
+          variant="primary"
+        >
+          Choose your country to estimate
+        </Button>
+      </div>
+    </div>
+    <div
+      className="tax"
+    >
+      <div
+        className="taxHeader"
+      >
+        <p>
+          VAT (
+          20
+          %)
+        </p>
+      </div>
+      <div
+        className="taxValue"
+      >
+        <p>
+          $
+          20
+        </p>
+      </div>
+    </div>
+    <div>
+      <hr
+        className="middleLine"
+      />
+    </div>
+    <div
+      className="total"
+    >
+      <div
+        className="totalHeader"
+      >
+        <p>
+          Order total
+        </p>
+      </div>
+      <div
+        className="totalValue"
+      >
+        <p>
+          $
+          60
+        </p>
+      </div>
+    </div>
+    <div
+      className="buttons"
+    >
+      <Button
+        className="whitespace-nowrap loginButton"
+        onClick={[MockFunction]}
+        size="large"
+        variant="primary"
+      >
+        Login to checkout
+      </Button>
+      <Button
+        className="whitespace-nowrap continueButton"
+        onClick={[MockFunction]}
+        size="large"
+        variant="tertiary"
+      >
+        Continue browsing
+      </Button>
+    </div>
+  </div>
+</div>
+`;

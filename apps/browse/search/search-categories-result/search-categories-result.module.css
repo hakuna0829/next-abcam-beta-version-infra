@@ -1,0 +1,70 @@
+.container {
+  @apply absolute;
+  @apply min-h-screen;
+  @apply content-center;
+  @apply items-center;
+  @apply bg-grey20;
+  @apply w-full;
+  @apply z-searchCategoryResult;
+
+  @apply md:relative;
+  @apply md:overflow-y-auto;
+  @apply md:h-1/2;
+}
+
+.lozengeWrapper {
+  @apply inline-block;
+  @apply mb-2;
+}
+
+.wrapper {
+  @apply flex;
+  @apply relative;
+  @apply flex-col;
+  @apply md:flex-row;
+}
+
+.facetsColumn {
+  @apply flex-1;
+  @apply md:inset-y-1;
+  @apply md:inset-x-1;
+  @apply md:mt-6;
+  @apply md:mr-8;
+  @apply md:mb-0;
+  @apply md:ml-8;
+  margin: 3rem 5%;
+}
+
+.facetsType {
+  @apply text-grey60;
+  @apply text-2xl; /*?*/
+  @apply mb-3;
+}
+
+.facetsList {
+  @apply list-none;
+  @apply p-0;
+}
+
+.facetCount {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  @apply text-xs;
+  @apply ml-2;
+  padding: 0.2rem 0.4rem;
+  @apply relative;
+  top: -2px;
+}
+
+.facetLabel {
+  @apply whitespace-nowrap;
+  @apply overflow-ellipsis;
+}
+
+.buttonWrapper {
+  @apply text-center;
+  @apply fixed;
+  @apply left-0;
+  @apply right-0;
+  @apply bottom-16;
+}

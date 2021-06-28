@@ -1,0 +1,7 @@
+apiVersion: v2
+# Version related to the software being installed by Helm
+appVerion: "0.1.0"
+description: "Helm chart for deploying yeti-browse"
+name: yeti-browse
+# Helm chart version, independent of the appVersion
+version: "1.0"

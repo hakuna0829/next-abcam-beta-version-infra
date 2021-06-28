@@ -1,0 +1,32 @@
+.container {
+  @apply h-screen;
+  @apply flex;
+  @apply justify-center;
+  @apply bg-grey20;
+  @apply w-full;
+  @apply z-aboutDisclaimer;
+  @apply md:items-center;
+  @apply sm:pt-5;
+}
+
+.wrapper {
+  flex: 0.6;
+  @apply md:pl-6;
+}
+
+.message {
+  @apply text-grey95;
+  @apply mb-6;
+}
+
+.linkWrapper {
+  @apply text-white;
+  @apply ml-3;
+  @apply md:mr-3;
+  @apply inline;
+}
+
+.link {
+  @apply text-white;
+  @apply underline;
+}

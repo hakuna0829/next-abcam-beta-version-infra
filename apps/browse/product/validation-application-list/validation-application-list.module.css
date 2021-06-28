@@ -1,0 +1,22 @@
+.guaranteed div path,
+.guaranteed span {
+  @apply fill-green;
+  @apply text-green35;
+}
+
+.predicted div path,
+.predicted span,
+.notPredicted div path,
+.notPredicted span,
+.notGuaranteed div path,
+.notGuaranteed span {
+  @apply fill-crossGrey;
+  @apply text-grey60;
+}
+
+.text {
+  @apply mt-2;
+  @apply mb-4;
+  @apply text-grey20;
+  margin-left: 29px;
+}

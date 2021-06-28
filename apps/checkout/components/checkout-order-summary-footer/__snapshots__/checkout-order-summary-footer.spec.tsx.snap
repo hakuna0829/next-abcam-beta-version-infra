@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutOrderSummaryFooter should match the snapshot 1`] = `
+<div
+  className="CheckoutOrderSummaryFooter"
+>
+  <div
+    className="content"
+  >
+    <div
+      className="orderTotal"
+    >
+      <div
+        className="totalHeader"
+      >
+        <p>
+          Order total
+        </p>
+      </div>
+      <div
+        className="totalValue"
+      >
+        <p>
+          £
+          723.2
+        </p>
+      </div>
+    </div>
+    <div
+      className="placeOrder"
+    >
+      <Button
+        className="button"
+        onClick={[MockFunction]}
+        size="large"
+        variant="primary"
+      >
+        Place order
+      </Button>
+    </div>
+    <div
+      className="termsAndConditions"
+    >
+      <p>
+        By placing your order, you acknowledge that you read and agreed to
+        <Button
+          as="a"
+          bodyClassName="termsAndConditions link"
+          className="termsAndConditions button"
+          onClick={[MockFunction]}
+          size="small"
+          variant="tertiary"
+        >
+          Abcam's terms and conditions
+        </Button>
+        .
+      </p>
+    </div>
+  </div>
+</div>
+`;

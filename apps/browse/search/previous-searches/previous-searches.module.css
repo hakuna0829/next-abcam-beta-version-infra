@@ -1,0 +1,41 @@
+.wrapper {
+  @apply relative;
+  @apply overflow-y-scroll;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply bg-grey20;
+  @apply w-full;
+  @apply z-previousSearches;
+  @apply md:pb-24;
+  @apply pb-0;
+  @apply md:absolute;
+}
+
+.title {
+  @apply text-base;
+  @apply pb-3;
+  @apply text-white;
+  @apply m-0;
+}
+
+.searchTitle {
+  @apply md:m-0;
+  @apply md:p-0;
+  @apply flex-1;
+  margin: 0 10%;
+}
+
+.searchListItem {
+  padding: 10px 0;
+}
+
+.lozengeWrapper {
+  @apply inline-block;
+  @apply mr-2;
+}
+
+.searchKeywords {
+  @apply text-white;
+  padding: 0.5rem 1rem;
+}

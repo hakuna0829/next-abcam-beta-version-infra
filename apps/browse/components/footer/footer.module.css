@@ -1,0 +1,42 @@
+.container {
+  @apply bg-grey60;
+  @apply bottom-0;
+  @apply w-full;
+  @apply flex;
+  @apply flex-row;
+  @apply flex-wrap;
+  @apply items-center;
+  @apply whitespace-nowrap;
+  @apply text-white;
+  @apply text-base;
+  @apply tracking-normal;
+  @apply justify-between;
+  padding: 1.5rem 6.25%;
+  @apply z-footer;
+}
+
+.container .copyright {
+  @apply mt-3;
+  @apply mb-3;
+  @apply mr-6;
+}
+
+.container p {
+  @apply text-white;
+}
+
+.container .links {
+  @apply flex;
+  @apply flex-row;
+  @apply flex-wrap;
+  @apply mt-3;
+  @apply mb-3;
+}
+
+.container a {
+  @apply mr-4;
+  @apply md:ml-6;
+  @apply md:mr-0;
+  @apply no-underline;
+  @apply whitespace-nowrap;
+}

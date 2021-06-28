@@ -1,0 +1,22 @@
+{
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "abcam-web",
+  "tasksRunnerOptions": {},
+  "projects": {
+    "browse": { "tags": [] },
+    "browse-e2e": { "tags": [], "implicitDependencies": ["browse"] },
+    "lego-shared-components": { "tags": [] },
+    "checkout-shared": { "tags": [] },
+    "checkout": { "tags": [] },
+    "checkout-e2e": { "tags": [], "implicitDependencies": ["checkout"] },
+    "lego-shared-utils": { "tags": [] }
+  }
+}

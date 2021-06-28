@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShoppingBasket should match the snapshot 1`] = `
+<div
+  className="shoppingBasket"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="backButton"
+    >
+      <ForwardRef(SvgArrowLeft)
+        className="ico"
+      />
+       Back
+    </div>
+    <div
+      className="title"
+    >
+      Shopping Basket
+    </div>
+  </div>
+  <div
+    className="content"
+  >
+    <div
+      className="itemsContainer"
+    >
+      <BasketItemList
+        backURL="something"
+        deleteOnClick={[Function]}
+        isLoading={false}
+        items={Array []}
+        quantityOnChange={[Function]}
+        sizeOnChange={[Function]}
+      />
+    </div>
+    <div
+      className="orderSummaryContainer"
+    >
+      <OrderSummary
+        chooseCountryOnClick={[Function]}
+        continueOnClick={[Function]}
+        isExpanded={true}
+        isLoading={false}
+        itemsCount={0}
+        loginOnClick={[Function]}
+        subtotal={
+          Object {
+            "currency": "€",
+            "value": 0,
+          }
+        }
+        total={
+          Object {
+            "currency": "€",
+            "value": 0,
+          }
+        }
+        vat={
+          Object {
+            "currency": "€",
+            "value": 0,
+          }
+        }
+        vatPercentage={0}
+      />
+    </div>
+  </div>
+</div>
+`;

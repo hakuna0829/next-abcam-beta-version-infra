@@ -1,0 +1,30 @@
+.container {
+  @apply flex-grow;
+  @apply flex;
+  @apply items-center;
+}
+
+.title {
+  @apply text-grey20;
+  @apply text-4xl;
+  @apply md:text-6xl;
+}
+
+.description {
+  @apply pt-1_5;
+  @apply text-grey20;
+  @apply text-heading-xlarge;
+  @apply md:text-4xl;
+}
+
+.movedDescription {
+  @apply pt-1_5;
+  @apply pb-1_5;
+  @apply text-base;
+  @apply text-grey20;
+}
+
+.btnLabel {
+  @apply text-xs;
+  margin: 7px 0;
+}

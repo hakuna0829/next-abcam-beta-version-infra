@@ -1,0 +1,29 @@
+.facetCategory {
+  @apply my-5;
+  @apply text-grey20;
+  @apply text-xs;
+  @apply capitalize;
+  @apply flex;
+  @apply overflow-scroll;
+  @apply text-black;
+  @apply flex;
+  @apply items-center;
+  @apply h-12;
+
+  line-height: 2.5rem;
+
+  letter-spacing: 0.5px;
+
+  @apply overflow-x-scroll;
+  @apply overflow-y-hidden;
+  @apply items-center;
+}
+
+.btnCount {
+  @apply ml-2;
+  @apply bg-buttonQuaternaryHover;
+  @apply rounded-xl;
+  @apply text-button-small;
+  @apply py-1;
+  @apply px-1.5;
+}

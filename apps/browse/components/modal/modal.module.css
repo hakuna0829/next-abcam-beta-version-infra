@@ -1,0 +1,64 @@
+.overlay {
+  @apply fixed;
+  @apply top-0;
+  @apply left-0;
+  @apply flex;
+  @apply w-full;
+  @apply h-full;
+  @apply text-black;
+  @apply justify-center;
+  @apply items-center;
+  @apply opacity-0;
+  @apply z-hidden;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s, z-index 0.5s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.overlayShow {
+  @apply opacity-100;
+  @apply z-modalOverlay;
+}
+
+.modal {
+  @apply fixed;
+  @apply bg-white;
+  @apply w-pdpContactDistributorModal;
+  @apply h-pdpContactDistributorModal;
+  @apply rounded-sm;
+  @apply -bottom-full;
+
+  transition: bottom 0.5s linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0, 1);
+}
+
+.modalShow {
+  @apply bottom-0;
+  @apply relative;
+}
+
+.header {
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-between;
+  @apply px-6;
+  @apply py-5;
+}
+
+.crossContainer {
+  @apply cursor-pointer;
+}
+.crossContainer,
+.crossContainer path {
+  @apply fill-crossGrey;
+  @apply text-grey60;
+}
+
+.body {
+  @apply flex;
+  @apply flex-grow;
+  @apply flex-col;
+  @apply overflow-y-auto;
+  @apply overflow-x-hidden;
+}

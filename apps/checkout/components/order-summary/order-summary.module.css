@@ -1,0 +1,167 @@
+@media screen {
+  .OrderSummary {
+    @apply text-black;
+    @apply m-auto;
+
+    font-weight: 600;
+  }
+
+  .subTotal,
+  .subTotalFolded {
+    @apply flex;
+    @apply justify-between;
+    @apply pt-4;
+    @apply pb-1.5;
+  }
+
+  .shippingAndHandling,
+  .shippingAndHandlingFolded {
+    @apply flex;
+    @apply justify-between;
+    @apply text-xs;
+    @apply py-1.5;
+  }
+
+  .shippingAndHandlingHeader {
+    height: 1.125rem;
+  }
+
+  .shippingAndHandlingValue {
+    height: 1.125rem;
+  }
+
+  .shippingAndHandling .countrySelector,
+  .shippingAndHandlingFolded .countrySelector {
+    @apply bg-transparent;
+    @apply text-buttonPrimary;
+    @apply mx-0;
+    @apply border-none;
+    @apply pr-0;
+    @apply py-0;
+
+    span {
+      @apply pr-0;
+    }
+  }
+
+  .tax,
+  .taxFolded {
+    @apply flex;
+    @apply justify-between;
+    @apply text-xs;
+    @apply py-1.5;
+  }
+
+  .taxHeader {
+    @apply h-6;
+  }
+
+  .taxValue {
+    @apply h-6;
+  }
+
+  div .middleLine,
+  div .middleLineFolded {
+    @apply my-1.5;
+  }
+
+  .total,
+  .totalFolded {
+    @apply flex;
+    @apply justify-between;
+    @apply py-1.5;
+  }
+
+  .totalHeader {
+    height: 1.875rem;
+    width: 216px;
+  }
+
+  .totalValue {
+    height: 1.875rem;
+  }
+
+  .buttons,
+  .buttonsFolded {
+    @apply flex;
+    @apply flex-col;
+  }
+
+  .loginButton,
+  .loginButtonFolded {
+    @apply block;
+    @apply max-w-full;
+    @apply self-stretch;
+    @apply mb-3;
+    @apply text-center;
+
+    margin-top: 1.125rem;
+  }
+
+  .continueButton,
+  .continueButtonFolded {
+    @apply bg-transparent;
+    @apply flex;
+    @apply border-transparent;
+    @apply mt-3;
+    @apply mb-4;
+    @apply mx-auto;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      @apply bg-grey95;
+      @apply p-5;
+      @apply rounded;
+    }
+
+    .contentFolded {
+      @apply px-10;
+      @apply pb-5;
+      @apply bg-white;
+    }
+
+    .subTotalFolded {
+      @apply mt-0;
+      @apply justify-around;
+    }
+
+    .shippingAndHandlingFolded {
+      @apply hidden;
+    }
+
+    .taxFolded {
+      @apply hidden;
+    }
+
+    div .middleLineFolded {
+      @apply hidden;
+    }
+
+    .totalFolded {
+      @apply hidden;
+    }
+
+    .loginButtonFolded {
+      @apply mt-0.5;
+      @apply mb-0;
+      @apply justify-around;
+    }
+
+    .continueButtonFolded {
+      @apply hidden;
+    }
+
+    @media (max-width: 640px) {
+      .content {
+        @apply rounded-none;
+      }
+
+      @media (max-width: 475px) {
+        .continueButton {
+          @apply mb-0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@media screen {
+  .CheckoutOrderSummaryFooter {
+    @apply text-black;
+    @apply m-auto;
+    @apply bg-white;
+    @apply rounded;
+    @apply py-4;
+
+    font-weight: 600;
+
+    .content {
+      .orderTotal {
+        @apply flex;
+        @apply justify-evenly;
+        @apply text-lg;
+      }
+
+      .placeOrder {
+        @apply flex;
+        @apply flex-col;
+
+        .button {
+          @apply block;
+          @apply max-w-full;
+          @apply self-stretch;
+          @apply my-4;
+        }
+      }
+
+      .termsAndConditions {
+        @apply text-xs;
+        @apply text-center;
+        @apply px-0;
+        @apply mr-0;
+
+        .button {
+          @apply border-none;
+        }
+
+        .link {
+          @apply underline;
+          @apply text-black;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .CheckoutOrderSummaryFooter {
+      @apply rounded-none;
+      @apply bg-grey95;
+
+      .termsAndConditions {
+        .link {
+          @apply underline;
+          @apply bg-grey95;
+        }
+      }
+    }
+  }
+}

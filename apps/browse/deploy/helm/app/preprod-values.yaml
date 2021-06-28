@@ -1,0 +1,35 @@
+app_name: yeti-browse
+# Additional tag to add to resource names.
+# This tag should represent a unique environment name, e.g.,
+# mr-27, staging, test, prod, etc.
+environment_tag: preprod
+namespace: yeti
+service_port: 80
+container_port: 3000
+image:
+  repository: 770061602930.dkr.ecr.eu-west-1.amazonaws.com
+  # Name of the docker image. Defined in ecr/settings/ops.tfvars
+  name: yeti-browse
+  tag:
+  imagePullPolicy: IfNotPresent
+replicas: 2 # number of pods
+additional_resource_tags: Project=YETI,System=ekscalibur-preprod
+aws_region: eu-west-1
+aws_xray_daemon_address: xray-daemon-service.monitoring:2000
+security_context:
+  # Arbitrary value, in order to allow the Pod to read the web identity
+  # token file from the file system.
+  # see https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts-technical-overview.html#pod-configuration
+  fs_group: 1337
+# service_account_role_arn:
+# ssm_parameter_store_prefix: preprod
+ingress_scheme: internal
+ingress_security_group:
+extra_envvars:
+  GRAPHQL_AUTHORIZATION: 'FROM_GITLABCI_VARIABLES'
+  GRAPHQL_ENDPOINT: '/content/graphql/global/endpoint.json'
+  GRAPHQL_HOST_URI: 'internal-k8s-yeti-yetibrow-92e87dc6ca-1044314955.eu-west-1.elb.amazonaws.com'
+  HOST_URI: 'https://author-p24061-e79159.adobeaemcloud.com'
+  IMAGES_URI: 'https://author-p24061-e79159.adobeaemcloud.com'
+  HOTJAR_SURVEY: 'https://surveys.hotjar.com/d2c551e1-d58f-477c-8017-1eb95e5fdf06'
+  ELOQUA_URL: 'https://go.myabcam.com/distributor-enquiry-test-site'

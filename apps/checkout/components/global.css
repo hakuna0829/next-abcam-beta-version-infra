@@ -1,0 +1,9 @@
+@import '../../browse/styles/globals.css';
+
+@font-face {
+  font-family: 'Eina03-Semibold';
+  src: url('../../browse/public/fonts/Eina03-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}

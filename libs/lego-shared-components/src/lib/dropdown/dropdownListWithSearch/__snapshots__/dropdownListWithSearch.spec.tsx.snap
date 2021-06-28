@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The dropdownListWithSearch element Snapshots Matches the snapshot 1`] = `
+<div>
+  <div
+    class="dropdownListWithSearchContainer"
+  >
+    <h1
+      class="title"
+    >
+      my title
+    </h1>
+    <input
+      aria-label="filter-list"
+      class="searchBar"
+      placeholder="my placeholder"
+      type="text"
+    />
+    <div
+      class="listContainer"
+    >
+      
+      
+    </div>
+  </div>
+</div>
+`;

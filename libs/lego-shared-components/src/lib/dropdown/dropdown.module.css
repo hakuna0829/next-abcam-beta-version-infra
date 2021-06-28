@@ -1,0 +1,61 @@
+.dropdown {
+  @apply text-body-small;
+  @apply font-sb;
+  @apply relative;
+  @apply inline-flex;
+  @apply flex-col;
+  @apply cursor-pointer;
+
+  .selectedValueContainer {
+    @apply bg-interactiveWhiteTransparentActive;
+    @apply text-white;
+    @apply flex;
+    @apply flex-row;
+    @apply gap-2;
+    @apply py-2.5;
+    @apply px-4;
+    @apply rounded-sm;
+    @apply border border-solid border-strokeDarkBGMedium;
+    width: fit-content;
+
+    &:focus {
+      @apply outline-none;
+      @apply shadow-interactiveElement;
+    }
+
+    .openIcon {
+      @apply w-5;
+      @apply h-5;
+      @apply border-strokeDarkBGMedium;
+      path {
+        @apply fill-current;
+      }
+    }
+
+    &:hover {
+      @apply bg-strokeDarkBGMedium;
+    }
+  }
+
+  .dropdownContent {
+    @apply rounded-lg;
+    margin-top: 0.375rem;
+  }
+}
+
+.secondary {
+  .selectedValueContainer {
+    @apply bg-interactiveGreyTransparentHover;
+    @apply border-interactiveGreyTransparentHover;
+    @apply text-grey20;
+
+    &:hover {
+      @apply shadow-interactiveElement;
+      @apply bg-interactiveGreyTransparentHover;
+    }
+    &:focus {
+      @apply outline-none;
+      @apply shadow-interactiveElement;
+    }
+  }
+}

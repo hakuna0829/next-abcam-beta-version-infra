@@ -1,0 +1,38 @@
+.SizesBox {
+  font-weight: 600;
+
+  .sizeList {
+    @apply flex;
+    @apply justify-center;
+    @apply mt-2;
+  }
+
+  .singleSize {
+    @apply text-grey20;
+  }
+
+  .message {
+    @apply text-center;
+    @apply text-grey60;
+    @apply text-body-small;
+  }
+
+  .regularButton {
+    @apply bg-transparent;
+  }
+
+  .selectedButton {
+    @apply text-white;
+    @apply bg-green45;
+
+    .content {
+      @apply flex;
+      @apply items-start;
+
+      .ico {
+        @apply mt-0.5;
+        @apply mr-2;
+      }
+    }
+  }
+}

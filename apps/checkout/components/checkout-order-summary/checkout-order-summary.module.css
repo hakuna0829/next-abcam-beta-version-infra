@@ -1,0 +1,119 @@
+@media screen {
+  .CheckoutOrderSummary {
+    @apply text-black;
+    @apply m-auto;
+    @apply bg-grey95;
+    @apply rounded;
+    @apply py-4;
+
+    font-weight: 600;
+
+    .contentHeader,
+    .contentBody {
+      @apply flex;
+      @apply flex-col;
+
+      .checkoutInfo {
+        @apply flex;
+        @apply justify-between;
+        @apply mx-6;
+        @apply py-1.5;
+
+        .items {
+          @apply text-base;
+        }
+
+        .orderTotal {
+          @apply text-xl;
+        }
+
+        .discounts {
+          @apply text-xs;
+        }
+      }
+
+      .termsAndConditions {
+        @apply text-xs;
+        @apply text-center;
+        @apply px-0;
+        @apply mr-0;
+
+        .button {
+          @apply border-none;
+          @apply bg-grey95;
+        }
+
+        .link {
+          @apply underline;
+          @apply text-black;
+        }
+      }
+
+      .placeOrder {
+        @apply flex;
+        @apply flex-col;
+
+        .button {
+          @apply block;
+          @apply max-w-full;
+          @apply self-stretch;
+          @apply my-4;
+        }
+      }
+
+      .orderSummary {
+        @apply px-6;
+        @apply text-xl;
+      }
+    }
+  }
+
+  div .upperLine,
+  div .lowerLine {
+    @apply my-1.5;
+    @apply mx-6;
+  }
+
+  @media (max-width: 768px) {
+    .CheckoutOrderSummary {
+      @apply bg-white;
+
+      .contentBody,
+      .contentHeader {
+        .termsAndConditions {
+          .button {
+            @apply bg-white;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 640px) {
+      .CheckoutOrderSummary {
+        @apply bg-grey95;
+
+        .contentHeader {
+          .termsAndConditions {
+            .button {
+              @apply bg-grey95;
+            }
+          }
+        }
+
+        .contentBody {
+          @apply rounded;
+          @apply bg-white;
+          @apply py-3;
+        }
+      }
+
+      @media (max-width: 475px) {
+        .CheckoutOrderSummary {
+          .contentBody {
+            @apply rounded-none;
+          }
+        }
+      }
+    }
+  }
+}

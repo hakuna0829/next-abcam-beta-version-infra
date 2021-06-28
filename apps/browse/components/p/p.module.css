@@ -1,0 +1,14 @@
+.paragraph {
+  @apply text-xs;
+  @apply tracking-wider;
+  @apply mb-2;
+}
+
+.paragraph a {
+  @apply text-blue;
+  @apply underline;
+}
+
+.light {
+  @apply text-grey60;
+}

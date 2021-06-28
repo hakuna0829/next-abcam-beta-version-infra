@@ -1,0 +1,132 @@
+.overlay {
+  @apply fixed;
+  @apply h-full;
+  @apply w-full;
+  @apply overflow-x-hidden;
+  @apply top-0;
+  @apply left-0;
+  @apply z-imageOverlay;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
+}
+
+.overlayButtons {
+  @apply flex;
+  @apply absolute;
+  @apply top-16;
+  @apply right-20;
+}
+
+.container {
+  @apply mt-8;
+  @apply relative;
+  @apply text-center;
+  @apply w-full;
+  top: 25%;
+}
+
+.imageProfile {
+  @apply flex;
+  @apply justify-evenly;
+}
+
+.showDesktop {
+  @apply hidden;
+  @apply md:block;
+}
+
+.showMobile {
+  @apply md:hidden;
+}
+
+.imageProfileMobile {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
+  @apply relative;
+}
+
+.imageInfoTitle {
+  @apply text-2xl;
+  @apply mx-0;
+  @apply my-4;
+  @apply text-left;
+  @apply text-white;
+  @apply not-italic;
+  @apply tracking-tight;
+}
+
+.imageInfo {
+  @apply overflow-auto;
+  @apply text-white;
+  width: 40%;
+  height: 356px;
+}
+
+.imageInfoMobile {
+  @apply text-white;
+  @apply top-0;
+  @apply left-0;
+  margin: 0 6%;
+}
+
+.image {
+  @apply rounded;
+  @apply block;
+  @apply float-right;
+  max-width: 22.5rem;
+  max-height: 22.238rem;
+  transition: opacity 0.5s;
+  cursor: zoom-in;
+}
+
+.imageMobile {
+  @apply float-right;
+  height: 22.238rem;
+}
+
+.imageZoom {
+  width: 40%;
+  @apply m-0;
+}
+
+.imageMobileZoom {
+  @apply flex;
+  @apply justify-center;
+  @apply m-0;
+  width: 88%;
+}
+
+.description {
+  @apply text-xs;
+  @apply mt-2;
+  @apply text-left;
+  @apply text-white;
+  @apply not-italic;
+  @apply tracking-wide;
+}
+
+.description a {
+  @apply text-green45;
+}
+
+.wholeInfo {
+  margin-right: 30%;
+}
+
+.wholeInfoMobile {
+  @apply mr-0;
+  @apply overflow-auto;
+  @apply h-80;
+}
+
+.seeMore {
+  @apply cursor-pointer;
+  @apply text-xs;
+  @apply text-left;
+  @apply not-italic;
+  @apply tracking-wide;
+  @apply text-grey60;
+}

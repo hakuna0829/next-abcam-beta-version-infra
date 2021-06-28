@@ -1,0 +1,21 @@
+.description a {
+  @apply text-buttonPrimary;
+}
+
+.description a:hover {
+  @apply no-underline;
+}
+
+.badgeContainer {
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply my-8;
+}
+
+.drawerHeader {
+  @apply flex;
+  @apply text-2xl;
+  @apply text-grey20;
+  @apply text-center;
+}

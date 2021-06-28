@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The button Snapshots As a button Accepts a left and right icon 1`] = `
+<button
+  class="container primary large"
+  type="button"
+>
+  <svg />
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+  <svg />
+</button>
+`;
+
+exports[`The button Snapshots As a button Accepts a left icon 1`] = `
+<button
+  class="container primary large"
+  type="button"
+>
+  <svg />
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots As a button Accepts a right icon 1`] = `
+<button
+  class="container primary large"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+  <svg />
+</button>
+`;
+
+exports[`The button Snapshots As a button Accepts external classes 1`] = `
+<button
+  class="container primary large myFakeClass"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots As a button Matches snapshot 1`] = `
+<button
+  class="container primary large"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots As a button Shows a iconButton 1`] = `
+<button
+  class="container primary large iconButton"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    <svg />
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots As a link Accepts a left and right icon 1`] = `
+<a
+  class="container primary large"
+  href=""
+>
+  <svg />
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+  <svg />
+</a>
+`;
+
+exports[`The button Snapshots As a link Accepts a left icon 1`] = `
+<a
+  class="container primary large"
+  href=""
+>
+  <svg />
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</a>
+`;
+
+exports[`The button Snapshots As a link Accepts a right icon 1`] = `
+<a
+  class="container primary large"
+  href=""
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+  <svg />
+</a>
+`;
+
+exports[`The button Snapshots As a link Accepts external classes 1`] = `
+<a
+  class="container primary large myFakeClass"
+  href=""
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</a>
+`;
+
+exports[`The button Snapshots As a link Matches snapshot 1`] = `
+<a
+  class="container primary large"
+  href=""
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</a>
+`;
+
+exports[`The button Snapshots As a link Shows a iconButton 1`] = `
+<a
+  class="container primary large iconButton"
+  href=""
+>
+  <span
+    class="content"
+  >
+    <svg />
+  </span>
+</a>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 1`] = `
+<button
+  class="container primary small"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 2`] = `
+<button
+  class="container secondary small"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 3`] = `
+<button
+  class="container tertiary small"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 4`] = `
+<button
+  class="container quaternary small"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 5`] = `
+<button
+  class="container primary medium"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 6`] = `
+<button
+  class="container secondary medium"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 7`] = `
+<button
+  class="container tertiary medium"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 8`] = `
+<button
+  class="container quaternary medium"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 9`] = `
+<button
+  class="container primary large"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 10`] = `
+<button
+  class="container secondary large"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 11`] = `
+<button
+  class="container tertiary large"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`The button Snapshots Styles variant Accepts any combination of size and variant 12`] = `
+<button
+  class="container quaternary large"
+  type="button"
+>
+  <span
+    class="content"
+  >
+    Hello
+  </span>
+</button>
+`;

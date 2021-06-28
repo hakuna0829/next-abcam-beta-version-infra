@@ -1,0 +1,17 @@
+{
+  "fileServerFolder": ".",
+  "fixturesFolder": "./src/fixtures",
+  "integrationFolder": "./src/integration",
+  "modifyObstructiveCode": false,
+  "pluginsFile": "./src/plugins/index",
+  "supportFile": "./src/support/index.ts",
+  "video": true,
+  "videosFolder": "../../dist/cypress/apps/checkout-e2e/videos",
+  "screenshotsFolder": "./src/screenshots",
+  "screenshotOnRunFailure": false,
+  "videoCompression": false,
+  "chromeWebSecurity": false,
+  "responseTimeout": 50000,
+  "requestTimeout": 80000,
+  "baseUrl": "http://localhost:4400/"
+}

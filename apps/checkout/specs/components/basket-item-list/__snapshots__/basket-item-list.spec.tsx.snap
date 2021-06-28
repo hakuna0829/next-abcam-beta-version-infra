@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasketItemList should match the snapshot 1`] = `
+<div
+  className="text-black"
+>
+  <div
+    className="text-body-small gap-3 grid itemGridFull"
+    role="table"
+  >
+    <BasketItem
+      deleteOnClick={[MockFunction]}
+      index={0}
+      item={
+        Object {
+          "abId": "ab120002",
+          "availability": Object {
+            "inStock": true,
+            "message": "Estimated delivery on Friday, 30 April",
+            "restricted": false,
+          },
+          "id": "some-random-id",
+          "itemTotal": Object {
+            "original": Object {
+              "currency": "€",
+              "value": 600,
+            },
+            "price": Object {
+              "currency": "€",
+              "value": 550,
+            },
+          },
+          "name": "L-AP4, group III mGlu agonist",
+          "sizes": Array [
+            Object {
+              "quantities": Array [
+                Object {
+                  "selected": true,
+                  "value": 10,
+                },
+                Object {
+                  "value": 20,
+                },
+                Object {
+                  "value": 30,
+                },
+              ],
+              "selected": true,
+              "sku": "ab290-10µg",
+              "unit": "µg",
+              "value": 10,
+            },
+            Object {
+              "quantities": Array [
+                Object {
+                  "selected": true,
+                  "value": 10,
+                },
+                Object {
+                  "value": 20,
+                },
+                Object {
+                  "value": 30,
+                },
+              ],
+              "selected": true,
+              "sku": "ab290-10µg",
+              "unit": "µg",
+              "value": 20,
+            },
+          ],
+          "unitPrice": Object {
+            "original": Object {
+              "currency": "€",
+              "value": 700,
+            },
+            "price": Object {
+              "currency": "€",
+              "value": 700,
+            },
+          },
+        }
+      }
+      key="0"
+      quantityOnChange={[Function]}
+      simplified={false}
+      sizeOnChange={[Function]}
+    />
+    <BasketItem
+      deleteOnClick={[MockFunction]}
+      index={1}
+      item={
+        Object {
+          "abId": "ab290",
+          "availability": Object {
+            "inStock": false,
+            "message": "Estimated delivery on Friday, 30 April",
+            "restricted": false,
+          },
+          "id": "some-random-id",
+          "itemTotal": Object {
+            "original": Object {
+              "currency": "€",
+              "value": 600,
+            },
+            "price": Object {
+              "currency": "€",
+              "value": 550,
+            },
+          },
+          "name": "Anti-GFP antibody",
+          "sizes": Array [
+            Object {
+              "quantities": Array [
+                Object {
+                  "selected": true,
+                  "value": 10,
+                },
+                Object {
+                  "value": 20,
+                },
+                Object {
+                  "value": 30,
+                },
+              ],
+              "selected": true,
+              "sku": "ab290-10µg",
+              "unit": "µg",
+              "value": 10,
+            },
+            Object {
+              "quantities": Array [
+                Object {
+                  "selected": true,
+                  "value": 10,
+                },
+                Object {
+                  "value": 20,
+                },
+                Object {
+                  "value": 30,
+                },
+              ],
+              "selected": true,
+              "sku": "ab290-10µg",
+              "unit": "µg",
+              "value": 20,
+            },
+          ],
+          "unitPrice": Object {
+            "original": Object {
+              "currency": "€",
+              "value": 700,
+            },
+            "price": Object {
+              "currency": "€",
+              "value": 700,
+            },
+          },
+        }
+      }
+      key="1"
+      quantityOnChange={[Function]}
+      simplified={false}
+      sizeOnChange={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`BasketItemList should render in smaller screen 1`] = `
+<div
+  className="text-black"
+>
+  <div
+    className="text-body-small gap-3 grid itemGridFull"
+    role="table"
+  >
+    <BasketItem
+      deleteOnClick={[MockFunction]}
+      index={0}
+      item={
+        Object {
+          "abId": "ab120002",
+          "availability": Object {
+            "inStock": true,
+            "message": "Estimated delivery on Friday, 30 April",
+            "restricted": false,
+          },
+          "id": "some-random-id",
+          "itemTotal": Object {
+            "original": Object {
+              "currency": "€",
+              "value": 600,
+            },
+            "price": Object {
+              "currency": "€",
+              "value": 550,
+            },
+          },
+          "name": "L-AP4, group III mGlu agonist",
+          "sizes": Array [
+            Object {
+              "quantities": Array [
+                Object {
+                  "selected": true,
+                  "value": 10,
+                },
+                Object {
+                  "value": 20,
+                },
+                Object {
+                  "value": 30,
+                },
+              ],
+              "selected": true,
+              "sku": "ab290-10µg",
+              "unit": "µg",
+              "value": 10,
+            },
+            Object {
+              "quantities": Array [
+                Object {
+                  "selected": true,
+                  "value": 10,
+                },
+                Object {
+                  "value": 20,
+                },
+                Object {
+                  "value": 30,
+                },
+              ],
+              "selected": true,
+              "sku": "ab290-10µg",
+              "unit": "µg",
+              "value": 20,
+            },
+          ],
+          "unitPrice": Object {
+            "original": Object {
+              "currency": "€",
+              "value": 700,
+            },
+            "price": Object {
+              "currency": "€",
+              "value": 700,
+            },
+          },
+        }
+      }
+      key="0"
+      quantityOnChange={[Function]}
+      simplified={false}
+      sizeOnChange={[Function]}
+    />
+    <BasketItem
+      deleteOnClick={[MockFunction]}
+      index={1}
+      item={
+        Object {
+          "abId": "ab290",
+          "availability": Object {
+            "inStock": false,
+            "message": "Estimated delivery on Friday, 30 April",
+            "restricted": false,
+          },
+          "id": "some-random-id",
+          "itemTotal": Object {
+            "original": Object {
+              "currency": "€",
+              "value": 600,
+            },
+            "price": Object {
+              "currency": "€",
+              "value": 550,
+            },
+          },
+          "name": "Anti-GFP antibody",
+          "sizes": Array [
+            Object {
+              "quantities": Array [
+                Object {
+                  "selected": true,
+                  "value": 10,
+                },
+                Object {
+                  "value": 20,
+                },
+                Object {
+                  "value": 30,
+                },
+              ],
+              "selected": true,
+              "sku": "ab290-10µg",
+              "unit": "µg",
+              "value": 10,
+            },
+            Object {
+              "quantities": Array [
+                Object {
+                  "selected": true,
+                  "value": 10,
+                },
+                Object {
+                  "value": 20,
+                },
+                Object {
+                  "value": 30,
+                },
+              ],
+              "selected": true,
+              "sku": "ab290-10µg",
+              "unit": "µg",
+              "value": 20,
+            },
+          ],
+          "unitPrice": Object {
+            "original": Object {
+              "currency": "€",
+              "value": 700,
+            },
+            "price": Object {
+              "currency": "€",
+              "value": 700,
+            },
+          },
+        }
+      }
+      key="1"
+      quantityOnChange={[Function]}
+      simplified={false}
+      sizeOnChange={[Function]}
+    />
+  </div>
+</div>
+`;

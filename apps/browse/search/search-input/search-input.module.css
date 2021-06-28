@@ -1,0 +1,214 @@
+.clearButton {
+  @apply cursor-pointer;
+  @apply border-none;
+  @apply bg-white;
+  @apply bg-opacity-20;
+  @apply rounded-lg;
+  @apply absolute;
+  @apply right-0;
+  top: -3px;
+  padding: 9px 10px 7px;
+
+  @apply hover:bg-white;
+  @apply hover:bg-opacity-40;
+
+  @apply md:top-0;
+  @apply md:-right-2;
+
+  @media (max-width: 800px) {
+    padding: 4px 4px 0px;
+  }
+}
+
+.clearButtonSvg {
+  @apply fill-white;
+  @apply w-5;
+  @apply h-5;
+}
+
+.wrapper {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply h-full;
+  @apply pl-1_5;
+  @apply pr-1_5;
+  @apply md:pl-0;
+  @apply md:pr-0;
+}
+
+.wrapperNotFixed {
+  width: 180%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.inputWrapper {
+  @apply flex-1;
+}
+
+.input {
+  @apply cursor-pointer;
+  @apply bg-grey20;
+  @apply bg-opacity-10;
+  @apply my-2;
+  @apply mx-0;
+  @apply border-solid;
+  @apply rounded-full;
+  @apply py-1_5;
+  @apply px-1_2;
+  @apply md:py-1_1;
+  @apply md:px-2_2;
+}
+
+.facetLabelUnmatched {
+  @apply text-white;
+  @apply text-base;
+}
+
+.searchHint {
+  letter-spacing: 0.5px;
+  @apply text-xs;
+  @apply text-white;
+  @apply text-center;
+  @apply hidden;
+  @apply sm:block;
+}
+
+.hiddenInputValueSpan {
+  @apply inline-block;
+  @apply font-sb;
+  @apply text-2xl;
+  @apply invisible;
+  @apply absolute;
+  @apply -top-96;
+}
+
+.autoSuggestionTerm {
+  @apply text-xl;
+  @apply sm:text-2xl;
+  @apply font-sb;
+  @apply text-white;
+  @apply opacity-60;
+  @apply z-autoSuggestionTerm;
+  @apply h-full;
+  @apply xs:top-1;
+}
+
+.lozengeWrapper {
+  @apply my-1;
+  @apply mx-2;
+}
+
+.lozengesSeparatorWrapper {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply h-7;
+}
+
+.content {
+  @apply flex;
+  @apply h-full;
+  @apply items-center;
+}
+
+.selectedOptionsWrapper {
+  @apply flex;
+  @apply h-full;
+  @apply w-full;
+
+  @apply items-end;
+  @apply md:items-start;
+}
+
+.selectedOptions {
+  @apply flex;
+  @apply h-full;
+  @apply flex-wrap;
+  @apply justify-start;
+  @apply items-start;
+}
+
+.suggestionsWrapper {
+  @apply fixed;
+  @apply lg:absolute;
+  @apply right-0;
+  @apply lg:right-initial;
+  @apply bottom-0;
+  @apply lg:bottom-initial;
+  @apply top-100;
+  @apply lg:top-initial;
+  @apply mt-searchSuggestions;
+  @apply sm:mt-smSearchSuggestions;
+  @apply left-0;
+  min-width: 320px;
+  @apply max-w-initial;
+  @apply lg:max-w-400;
+  @apply w-full;
+  @apply lg:w-initial;
+  @apply bg-grey20;
+  @apply p-5;
+  @apply rounded-none;
+  @apply lg:rounded-8px;
+  @apply border;
+  @apply border-solid;
+  @apply border-white;
+  @apply border-opacity-20;
+  @apply z-suggestionsWrapper;
+  @apply overflow-hidden;
+  transition: opacity 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.inputAndSuggestionWrapper {
+  @apply flex-1;
+  @apply h-7;
+  @apply relative;
+}
+
+.separator {
+  @apply bg-white;
+  @apply h-px;
+  @apply w-full;
+  @apply block;
+  @apply mb-4;
+}
+
+.nativeInput {
+  @apply bg-transparent;
+  @apply border-none;
+  @apply outline-none;
+  @apply text-white;
+  @apply font-sb;
+  @apply overflow-hidden;
+  @apply text-xl;
+  @apply sm:text-2xl;
+  @apply h-full;
+
+  @apply md:text-left;
+  @apply placeholder-white;
+}
+
+.suggestions {
+  @apply m-0;
+  @apply p-0;
+  @apply list-none;
+}
+
+.suggestionsTitle {
+  @apply text-white;
+  @apply pb-4;
+  @apply m-0;
+  @apply text-xs;
+}
+
+.suggestionItem {
+  padding: 5px 0;
+}
+
+.suggestionsTitle {
+  @apply text-white;
+  @apply pb-4;
+  @apply m-0;
+  @apply text-xs;
+}

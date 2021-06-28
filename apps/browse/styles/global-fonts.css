@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Proxima-Nova-Alt-Bold';
+  src: url('/fonts/ProximaNovaAltBold/ProximaNovaA-Bold.woff2') format('woff2'),
+    url('/fonts/ProximaNovaAltBold/ProximaNovaA-Bold.woff') format('woff'),
+    url('/fonts/ProximaNovaAltBold/ProximaNovaA-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Eina03-Semibold';
+  src: url('/fonts/Eina03-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}

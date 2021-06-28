@@ -1,0 +1,39 @@
+.wrapper {
+  @apply grid;
+  @apply md:grid-cols-pdpTabs;
+  @apply mb-8;
+  @apply md:gap-x-4;
+  @apply md:border-b-2;
+  @apply md:border-solid;
+  @apply md:border-grey95;
+  @apply bg-white;
+}
+
+.wrapper.isSticky {
+  @apply sticky;
+  @apply top-0;
+  @apply right-0;
+  @apply z-pdpTabs;
+}
+
+.productCode {
+  @apply flex;
+  @apply md:row-start-1;
+  @apply text-grey60;
+  @apply text-xl;
+  @apply mt-4;
+  @apply md:mt-0;
+}
+
+.wrapper.isSticky .productCode {
+  @apply hidden;
+  @apply md:block;
+}
+
+.svgContainer {
+  @apply mr-2;
+}
+
+.svgContainer path {
+  @apply fill-pink;
+}

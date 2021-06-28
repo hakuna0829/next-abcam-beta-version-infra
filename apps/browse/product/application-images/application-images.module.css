@@ -1,0 +1,25 @@
+.container {
+  @apply flex;
+}
+
+.imageWrapper {
+  @apply bg-white;
+  @apply flex;
+  @apply justify-center;
+  @apply ml-2;
+  @apply mr-2;
+  @apply rounded-4px;
+
+  width: 180px;
+  height: 180px;
+
+  box-shadow: 0 3px 8px 0 rgba(39, 63, 63, 0.11);
+  border: solid 4px var(--brand-grey);
+}
+
+.image {
+  @apply cursor-pointer;
+  @apply max-h-full;
+  @apply max-w-full;
+  @apply object-contain;
+}

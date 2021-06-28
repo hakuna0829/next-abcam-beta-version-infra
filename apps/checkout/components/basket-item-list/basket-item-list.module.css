@@ -1,0 +1,231 @@
+/* Grid explained
+There are 7 columns + 1 for the border in between the rows
+1.Code+Name 2.Size 3.Availability 4.Quantity 5.Price 6.Total 7.Delete
+In mark-up all the cells in the table are siblings hence numbers above are targeted with nth-child(8n+)
+e.g. nth-child(8n+3) targets the Availability column, nth-child(8n) targets the row border bottom
+
+Order can be given from 0 to 9 based on its row order in the table
+e.g. order: calc(var(--order) + 9);
+*/
+
+.emptyBasketWrapper {
+  padding-top: 15vh;
+}
+
+.emptyBasketWrapper > svg path {
+  @apply fill-crossGrey;
+}
+
+.emptyBasketWrapper a path {
+  @apply fill-white;
+}
+
+.bin path {
+  @apply fill-red;
+}
+
+.item {
+  order: var(--order);
+}
+
+.itemGridSimplified .item {
+  @apply self-center;
+}
+
+.item:not(.code):not(.separator) {
+  /* Avoid on .code or .code won't truncate */
+  @apply flex;
+  @apply flex-col;
+  @apply h-full;
+}
+
+.sizes,
+.availability,
+.quantity {
+  @apply items-start;
+}
+
+.sizes {
+  white-space: nowrap;
+}
+
+.unitPrice,
+.totalPrice {
+  @apply items-end;
+}
+
+.bin {
+  @apply -mr-3; /* Skip last column gap caused by wrapping */
+}
+
+.code {
+  @apply col-start-1;
+}
+
+.separator {
+  @apply col-span-full;
+
+  order: calc(var(--order) + 9); /* Always last */
+}
+
+.columnheader {
+  @apply whitespace-nowrap;
+}
+
+.cell {
+  @apply flex;
+  @apply flex-col;
+  @apply flex-grow;
+  @apply justify-center;
+  @apply transition-opacity;
+}
+
+/* Default (big screen) */
+.itemGridFull {
+  grid-template-columns:
+    minmax(0, auto) minmax(8%, auto) 10rem minmax(8%, auto)
+    repeat(2, minmax(0, auto)) auto 1px;
+}
+
+.itemGridSimplified {
+  grid-template-columns:
+    minmax(0, auto) repeat(2, minmax(20%, auto))
+    minmax(0, auto) auto 1px;
+}
+
+/* TODO Get breakpoint from Tailwind or somewhere global */
+
+/* Medium screen */
+@screen lgd {
+  .itemGridFull {
+    grid-template-columns:
+      minmax(10rem, min-content) minmax(min-content, 1fr) minmax(10%, 10rem) repeat(
+        2,
+        auto
+      )
+      1px;
+  }
+
+  .itemGridSimplified {
+    grid-template-columns: minmax(8rem, 40%) repeat(3, auto) 1px;
+  }
+
+  .item {
+    @apply self-start;
+  }
+
+  .item:not(.sizes):not(.quantity) .cell {
+    @apply justify-start;
+  }
+
+  .itemGridFull .code {
+    @apply col-span-2;
+  }
+  .itemGridSimplified .code {
+    @apply col-span-3;
+  }
+
+  .bin .columnheader {
+    @apply block;
+    @apply invisible;
+  }
+
+  .sizes .columnheader,
+  .quantity .columnheader {
+    @apply block;
+  }
+
+  .columnheader {
+    @apply mb-1;
+  }
+
+  .fakeCode {
+    @apply block;
+  }
+
+  .sizes {
+    order: calc(var(--order) + 3);
+
+    @apply col-start-1;
+  }
+
+  .quantity {
+    order: calc(var(--order) + 4);
+  }
+
+  .bin {
+    order: calc(var(--order) + 5);
+
+    @apply col-start-5;
+  }
+
+  .totalPrice {
+    @apply -mr-3; /* Skip last column gap caused by wrapping */
+  }
+}
+
+/* Only in medium */
+@media (min-width: theme('screens.smu')) and (max-width: theme('screens.lgd.max')) {
+  .code .columnheader:not(:global(.hidden)) {
+    @apply invisible;
+  }
+}
+
+/* Small screen */
+@screen smd {
+  .itemGridFull {
+    grid-template-columns: minmax(25%, auto) repeat(2, 1fr) auto 1px;
+  }
+
+  .code .columnheader,
+  .totalPrice .columnheader,
+  .availability .columnheader {
+    @apply hidden;
+  }
+
+  .itemGridFull .code,
+  .itemGridFull .availability {
+    @apply col-span-3;
+  }
+
+  .totalPrice {
+    order: calc(var(--order) + 2);
+  }
+
+  .unitPrice:not(.code):not(.separator) {
+    /* not(.code/speparator) adds specificity to override the display flex */
+    @apply hidden;
+  }
+
+  .availability {
+    order: calc(var(--order) + 7);
+
+    @apply col-start-1;
+  }
+
+  .availability .cell,
+  .availability p:not(.fakeCode):not(.columnheader) {
+    @apply inline;
+  }
+
+  .availability .fakeCode {
+    @apply hidden;
+  }
+
+  .bin {
+    @apply col-start-4;
+  }
+}
+
+/* TODO Remove and use from Tailwind when available */
+@screen lgu {
+  .itemGridFull .code {
+    @apply truncate;
+  }
+}
+
+/* TODO Link styles should come from global */
+
+.blue-link {
+  color: #0047bb;
+}

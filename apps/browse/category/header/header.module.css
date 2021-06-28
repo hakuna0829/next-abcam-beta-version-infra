@@ -1,0 +1,41 @@
+.subHeading {
+  @apply text-grey20;
+  @apply text-heading-large;
+  @apply mb-2;
+}
+
+.categoryCount {
+  @apply text-grey20;
+  @apply mt-8;
+  @apply mb-7;
+
+  font-size: 18px;
+}
+
+.btnView {
+  margin-left: 1.5rem;
+}
+
+.categoryHighlight {
+  @apply text-green40;
+}
+
+.totalCount {
+  @apply text-buttonPrimary;
+  @apply text-2xl;
+  @apply flex;
+  @apply mt-2;
+}
+
+.btnCount {
+  @apply ml-2;
+  @apply bg-buttonPrimaryCount;
+  @apply rounded-xl;
+  @apply text-button-small;
+  @apply py-1;
+  @apply px-1.5;
+}
+
+.antibodyType {
+  @apply mr-4;
+}

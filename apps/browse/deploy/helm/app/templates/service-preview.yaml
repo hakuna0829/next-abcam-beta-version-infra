@@ -1,0 +1,14 @@
+# Service preview app 
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "full_app_name" . }}-preview-service
+  namespace: {{ .Values.namespace }}
+spec:
+  type: NodePort
+  ports:
+    - port: {{ .Values.service_port }}
+      targetPort: {{ .Values.container_port }}
+      protocol: TCP
+  selector:
+    app: {{ include "full_app_name" . }}-preview

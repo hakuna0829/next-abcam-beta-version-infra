@@ -1,0 +1,132 @@
+.productFirstColumnHeader,
+.productSecondColumnHeader,
+.productThirdColumnHeader,
+.productForthColumnHeader,
+.productFifthColumnHeader,
+.productSixColumnHeader,
+.productFirstColumn,
+.productSecondColumn,
+.productThirdColumn,
+.productForthColumn,
+.productFifthColumn,
+.productSixColumn {
+  @apply flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  flex-basis: 0;
+  @apply p-2;
+  @apply break-words;
+  @apply truncate;
+  @apply min-w-0;
+}
+
+.productFirstColumnHeader {
+  flex-grow: 7;
+}
+
+.productForthColumnHeader,
+.productFifthColumnHeader,
+.productSixColumnHeader {
+  flex-grow: 2;
+}
+
+.productFirstColumn {
+  flex-grow: 7;
+  @apply flex-col;
+  @apply w-full;
+  @apply justify-center;
+}
+
+.productSecondColumn,
+.productThirdColumn {
+  @apply items-center;
+  @apply w-full;
+  @apply hidden;
+  @apply md:block;
+}
+.productForthColumn {
+  @apply items-center;
+  flex-grow: 2;
+  @apply mb-2;
+  @apply md:mb-0;
+  @apply w-full;
+}
+.productFifthColumn {
+  flex-grow: 2;
+  @apply items-center;
+  @apply mb-2;
+  @apply md:mb-0;
+  @apply flex-row;
+  @apply md:flex-col;
+  @apply w-full;
+}
+.productSixColumn {
+  flex-grow: 2;
+  @apply items-center;
+  @apply mb-2;
+  @apply md:mb-0;
+  @apply flex-row;
+  @apply md:flex-col;
+  @apply w-full;
+}
+
+.productFirstColumnFirstRow {
+  @apply flex;
+  @apply overflow-hidden;
+  @apply mb-2;
+  @apply md:mb-0;
+}
+
+.productFirstColumnSecondRow {
+  text-align: left;
+  @apply text-grey20;
+  @apply overflow-hidden;
+
+  word-wrap: break-word;
+  @apply mb-2;
+  @apply md:mb-0;
+}
+
+.numberCircle {
+  background-color: rgba(39, 63, 63, 0.05);
+  @apply rounded-tl;
+  @apply w-12;
+  @apply h-12;
+  @apply text-center;
+  @apply hidden;
+  @apply md:block;
+}
+
+.numberCircle span {
+  @apply inline-block;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  @apply ml-2;
+  @apply mr-2;
+}
+
+.productCode {
+  @apply text-xs;
+  @apply text-grey60;
+  @apply my-auto;
+  @apply mx-0;
+}
+
+.mobileViewColumnTitle {
+  @apply flex;
+  @apply flex-row;
+  @apply flex-nowrap;
+  @apply flex-grow;
+  @apply text-grey60;
+  @apply w-1/5;
+  flex-basis: 0;
+  @apply md:hidden;
+}
+.mobileViewColumnText {
+  @apply text-left;
+}
+
+.placeholder {
+  background: #c4c4c4;
+  @apply text-transparent;
+}

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The dropdown element Snapshots Matches the snapshot when the data does not have a short display value 1`] = `
+<div>
+  <div
+    class="dropdown"
+  >
+    <div
+      class="selectedValueContainer"
+      role="button"
+      tabindex="0"
+    >
+      United Kingdom
+      <svg
+        aria-label="Open dropdown"
+        class="openIcon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`The dropdown element Snapshots Matches the snapshot when the data has a short display value 1`] = `
+<div>
+  <div
+    class="dropdown"
+  >
+    <div
+      class="selectedValueContainer"
+      role="button"
+      tabindex="0"
+    >
+      🇬🇧
+      <svg
+        aria-label="Open dropdown"
+        class="openIcon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`The dropdown element Snapshots Matches the snapshot when the secondary variant is specified 1`] = `
+<div>
+  <div
+    class="dropdown secondary"
+  >
+    <div
+      class="selectedValueContainer"
+      role="button"
+      tabindex="0"
+    >
+      🇬🇧
+      <svg
+        aria-label="Open dropdown"
+        class="openIcon"
+      />
+    </div>
+  </div>
+</div>
+`;

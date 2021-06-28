@@ -1,0 +1,7 @@
+{
+  "GRAPHQL_HOST_URI": "http://localhost:4200",
+  "HOST_URI": "http://localhost:4502",
+  "GRAPHQL_ENDPOINT": "/content/graphql/endpoint.gql",
+  "GRAPHQL_AUTHORIZATION": "user:pass",
+  "STAGE": "staging"
+}

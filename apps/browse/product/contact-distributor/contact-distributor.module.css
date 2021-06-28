@@ -1,0 +1,36 @@
+.container {
+  @apply items-center;
+  @apply hidden;
+  @apply space-y-4;
+  @apply rounded;
+  @apply md:flex;
+  @apply flex-col;
+  @apply p-8;
+  @apply text-center;
+  background-color: rgba(0, 71, 187, 0.05);
+}
+
+.notice {
+  @apply mb-0;
+  max-width: 330px;
+}
+
+.buyButtonContainer {
+  @apply absolute;
+  @apply right-4;
+  @apply md:hidden;
+  top: 80px;
+}
+
+.modalFooter {
+  @apply text-xs;
+  @apply text-center;
+  @apply py-4;
+  @apply tracking-wide;
+  @apply leading-normal;
+}
+
+.modalFooter .link {
+  @apply text-blue;
+  @apply pl-2;
+}

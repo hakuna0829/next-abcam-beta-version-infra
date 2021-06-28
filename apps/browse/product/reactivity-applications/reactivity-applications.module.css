@@ -1,0 +1,46 @@
+.wrapper {
+  @apply bg-grey95;
+  @apply mt-10;
+}
+
+.container {
+  @apply flex;
+  @apply grid-cols-2;
+  @apply auto-cols-auto;
+  @apply gap-x-4;
+  @apply items-center;
+  @apply mb-4;
+  @apply overflow-x-auto;
+}
+
+.heading {
+  @apply text-grey60;
+}
+
+.tabs {
+  @apply flex;
+}
+
+.tabs li a {
+  @apply text-xs;
+  @apply inline-flex;
+  @apply text-center;
+  @apply justify-center;
+  @apply items-center;
+  @apply text-grey20;
+  @apply mr-2;
+  @apply rounded-lg;
+  @apply border;
+  @apply border-solid;
+  border-color: rgba(39, 63, 63, 0.2);
+  padding: 0.626rem 1.3rem;
+}
+
+.tabs li a:hover {
+  @apply no-underline;
+}
+
+.tabs li a.active {
+  @apply text-white;
+  @apply bg-green45;
+}
